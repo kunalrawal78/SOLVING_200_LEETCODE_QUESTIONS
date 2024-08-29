@@ -18,13 +18,13 @@ public:
             max_lt = max(max_lt, height[i]);
         }
         
-        int result = 0;
+        int res = 0;
         for(int i = 0; i<=n-1; i++){
             if(height[i] < MAX_LEFT[i] && height[i] < MAX_RIGHT[i]) 
-                result += min(MAX_LEFT[i], MAX_RIGHT[i]) - height[i];
+                res += min(MAX_LEFT[i], MAX_RIGHT[i]) - height[i];
         }
 
-        return result;
+        return res;
 
     }
 };
